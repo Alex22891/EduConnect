@@ -1,0 +1,16 @@
+{
+  "licenses": [
+    {
+      "licenseKey": "ABC123",
+      "isActive": true,
+      "expiryDate": "2024-12-31",
+      "username": "user1"
+    },
+    {
+      "licenseKey": "XYZ789",
+      "isActive": false,
+      "expiryDate": "2023-12-31",
+      "username": "user2"
+    }
+  ]
+}
