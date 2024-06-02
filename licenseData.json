@@ -2,7 +2,7 @@
   "licenses": [
     {
       "licenseKey": "ABC123",
-      "isActive": false,
+      "isActive": true,
       "expiryDate": "2024-07-01",
       "username": "user1"
     },
