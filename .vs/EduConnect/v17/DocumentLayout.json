@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Computer\\Desktop\\Diplom\\EduConnect\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5384A6AE-F716-49B0-A1A5-B82F874C017B}|EduConnect\\EduConnect.csproj|c:\\users\\computer\\desktop\\diplom\\educonnect\\educonnect\\licensechecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5384A6AE-F716-49B0-A1A5-B82F874C017B}|EduConnect\\EduConnect.csproj|solutionrelative:educonnect\\licensechecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5384A6AE-F716-49B0-A1A5-B82F874C017B}|EduConnect\\EduConnect.csproj|c:\\users\\computer\\desktop\\diplom\\educonnect\\educonnect\\loginwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{5384A6AE-F716-49B0-A1A5-B82F874C017B}|EduConnect\\EduConnect.csproj|solutionrelative:educonnect\\loginwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5384A6AE-F716-49B0-A1A5-B82F874C017B}|EduConnect\\EduConnect.csproj|c:\\users\\computer\\desktop\\diplom\\educonnect\\educonnect\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5384A6AE-F716-49B0-A1A5-B82F874C017B}|EduConnect\\EduConnect.csproj|solutionrelative:educonnect\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LicenseChecker.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\Diplom\\EduConnect\\EduConnect\\LicenseChecker.cs",
+              "RelativeDocumentMoniker": "EduConnect\\LicenseChecker.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\Diplom\\EduConnect\\EduConnect\\LicenseChecker.cs",
+              "RelativeToolTip": "EduConnect\\LicenseChecker.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T23:13:11.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\Diplom\\EduConnect\\EduConnect\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EduConnect\\LoginWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\Diplom\\EduConnect\\EduConnect\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "EduConnect\\LoginWindow.xaml.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCAAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T23:12:59.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\Diplom\\EduConnect\\EduConnect\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "EduConnect\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\Diplom\\EduConnect\\EduConnect\\LoginWindow.xaml",
+              "RelativeToolTip": "EduConnect\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-02T23:12:58.239Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

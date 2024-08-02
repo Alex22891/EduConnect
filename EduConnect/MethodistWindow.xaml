@@ -1,0 +1,112 @@
+﻿<Controls:MetroWindow  xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls" x:Class="EduConnect.MethodistWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EduConnect"
+        mc:Ignorable="d"
+        Title="Методист: Главное окно" Height="800" Width="1200" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+    <Controls:MetroWindow.Resources>
+        <local:RecordsCountConverter x:Key="RecordsCountConverter"/>
+    </Controls:MetroWindow.Resources>
+    <Grid>
+        <TabControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+            <TabItem Header="Нормативы">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="158.2"/>
+                        <ColumnDefinition Width="51.8"/>
+                        <ColumnDefinition Width="37.896"/>
+                        <ColumnDefinition Width="127.534"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Панель с кнопками -->
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="5,5,0,5" Grid.ColumnSpan="8" Width="479">
+                        <Button Content="Добавить" Click="AddNormativeButton_Click" Margin="5"/>
+                        <Button Content="Удалить" Click="DeleteNormativeButton_Click" Margin="5"/>
+                        <Button Content="Экспорт в Excel" Click="ExportExcelNormatives_Click" Margin="5"/>
+                        <TextBox x:Name="SearchNormativesTextBox" Controls:TextBoxHelper.Watermark="Введите данные для поиска" Margin="5" VerticalAlignment="Center" TextChanged="SearchNormativesTextBox_TextChanged"/>
+                    </StackPanel>
+
+                    <!-- DataGrid для отображения нормативов -->
+                    <DataGrid Grid.Row="1" Grid.ColumnSpan="8" x:Name="NormativesDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5,26,5,28" MouseDoubleClick="NormativesDataGrid_MouseDoubleClick">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                            <DataGridTextColumn Header="ФИО" Binding="{Binding FullName}"/>
+                            <DataGridTextColumn Header="Вид спорта" Binding="{Binding SportName}"/>
+                            <DataGridTextColumn Header="Год сдачи" Binding="{Binding YearComplete}"/>
+                            <DataGridTextColumn Header="Тренер-преподаватель" Binding="{Binding TrainerName}"/>
+                            <DataGridTextColumn Header="Нормативы на начало периода" Binding="{Binding NormsAtTheBeginning}"/>
+                            <DataGridTextColumn Header="Нормативы на конец периода" Binding="{Binding NormsAtTheEndOf}"/>
+                            <DataGridTextColumn Header="Процент сдачи" Binding="{Binding SurrenderRate}"/>
+                            <DataGridTextColumn Header="Комментарий" Binding="{Binding Comment}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBlock Grid.Row="2" Text="{Binding ElementName=NormativesDataGrid, Path=Items.Count, Converter={StaticResource RecordsCountConverter}}" Margin="5"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Мероприятия">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="158.2"/>
+                        <ColumnDefinition Width="51.8"/>
+                        <ColumnDefinition Width="37.896"/>
+                        <ColumnDefinition Width="127.534"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Поле поиска -->
+                    <TextBox Controls:TextBoxHelper.Watermark="Введите данные для поиска" TextChanged="SearchEventsTextBox_TextChanged" x:Name="SearchEventsTextBox" Grid.Row="0" Grid.Column="0" Width="200" Margin="5,5,5,5" Grid.ColumnSpan="2"/>
+
+                    <!-- Кнопки -->
+                    <Button x:Name="AddEventsButton" Content="Добавить мероприятие" Grid.Row="0" Grid.Column="2" Margin="5,5,5,5" Grid.ColumnSpan="2" Click="AddEventsButton_Click"/>
+                    <Button x:Name="ExportExcelEventsButton" Click="ExportExcelEventsButton_Click" Content="Экспорт в Excel" Grid.Row="0" Grid.Column="4" Margin="5,5,5,0" Height="30" VerticalAlignment="Top"/>
+                    <Button x:Name="DeleteEventButton" Click="DeleteEventButton_Click" Content="Удалить мероприятие" Grid.Row="0" Grid.Column="5" Margin="5,0,5,5" Height="30" VerticalAlignment="Bottom"/>
+
+                    <!-- DataGrid для отображения учеников -->
+                    <DataGrid x:Name="EventsDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5,26,5,10" Grid.Row="1" Grid.ColumnSpan="8"
+                  ItemsSource="{Binding Events}" MouseDoubleClick="EventsDataGrid_MouseDoubleClick">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
+                            <DataGridTextColumn Header="Название" Binding="{Binding Title}" />
+                            <DataGridTextColumn Header="Уровень" Binding="{Binding Level}" />
+                            <DataGridTextColumn Header="Дата проведения" Binding="{Binding Date, StringFormat=dd-MM-yyyy}" />
+                            <DataGridTextColumn Header="Кол-во" Binding="{Binding Amount}" />
+                            <DataGridTextColumn Header="Результат" Binding="{Binding Result}" />
+                            <DataGridTextColumn Header="Год" Binding="{Binding Year}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBlock Grid.Row="2" Text="{Binding ElementName=EventsDataGrid, Path=Items.Count, Converter={StaticResource RecordsCountConverter}}" Margin="5"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Личный кабинет">
+                <Grid>
+                    <StackPanel>
+                        <TextBlock x:Name="UsernameTextBlock" Text="Имя пользователя: " FontSize="16"/>
+                        <TextBlock x:Name="RoleTextBlock" Text="Роль: " FontSize="16"  Height="44" Width="340" HorizontalAlignment="Left"/>
+                    </StackPanel>
+
+                    <Button x:Name="LogoutButton" Content="Выйти" Width="100" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="864,0,0,10" Click="LogoutButton_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Controls:MetroWindow>

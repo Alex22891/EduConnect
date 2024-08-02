@@ -1,0 +1,52 @@
+-- Создание базы данных EduConnect, если она еще не существует
+CREATE DATABASE IF NOT EXISTS EduConnect;
+
+-- Использование базы данных EduConnect
+USE EduConnect;
+
+-- Создание таблицы Students для хранения информации об учениках
+CREATE TABLE IF NOT EXISTS Students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    FullName VARCHAR(100) NOT NULL,
+    BirthDate DATE NOT NULL,
+    School VARCHAR(100),
+    Class VARCHAR(50),
+    Sport VARCHAR(100),
+    OrderEnrollment VARCHAR(100),
+    OrderDismissal VARCHAR(100),
+    ParentsFullName VARCHAR(100),
+    PhoneNumber VARCHAR(20),
+    Address VARCHAR(200),
+    ParentsWorkPlace VARCHAR(100),
+    ParentsPosition VARCHAR(100),
+    BirthCertificate VARCHAR(100),
+    DocumentNumber VARCHAR(100),
+    IssuedBy VARCHAR(100),
+    SNILS VARCHAR(20),
+    INN VARCHAR(12)
+);
+
+-- Создание таблицы Norms для хранения информации о нормативах
+CREATE TABLE IF NOT EXISTS Norms (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(225),
+    norms TEXT
+);
+
+-- Создание таблицы Competitions для хранения информации о соревнованиях
+CREATE TABLE IF NOT EXISTS Competitions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    sport_type VARCHAR(255),
+    event_date DATETIME,
+    participants_count INT,
+    results TEXT
+);
+
+-- Создание таблицы Users для хранения информации о пользователях
+CREATE TABLE IF NOT EXISTS Users (
+    UserID INT AUTO_INCREMENT PRIMARY KEY,
+    Username VARCHAR(255),
+    Password VARCHAR(255),
+    Role VARCHAR(100)
+);

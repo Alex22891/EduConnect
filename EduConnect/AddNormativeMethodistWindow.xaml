@@ -1,0 +1,67 @@
+﻿<Controls:MetroWindow  xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls" x:Class="EduConnect.AddNormativeMethodistWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EduConnect"
+        mc:Ignorable="d"
+        Title="Добавление/редактирование" Height="457" Width="499" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <!-- ФИО -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Content="ФИО: " VerticalAlignment="Center"/>
+                <TextBox x:Name="FullNameTextBox" Width="300" Height="30"/>
+            </StackPanel>
+
+            <!-- Вид спорта -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Content="Вид спорта: " VerticalAlignment="Center"/>
+                <ComboBox x:Name="SportNameComboBox" Width="300" Height="30"/>
+            </StackPanel>
+
+            <!-- Год -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Content="Год: " VerticalAlignment="Center"/>
+                <TextBox x:Name="YearTextBox" Width="300" Height="30" AcceptsReturn="True" TextWrapping="Wrap"/>
+            </StackPanel>
+
+            <!-- ФИО тренера -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Content="ФИО тренера: " VerticalAlignment="Center"/>
+                <ComboBox x:Name="TrainerNameComboBox" Width="300" Height="30"/>
+            </StackPanel>
+
+            <!-- Нормативы на начало периода -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Content="Нормативы на начало периода: " VerticalAlignment="Center"/>
+                <TextBox x:Name="NormsAtTheBeginningTextBox" Width="300" Height="30"/>
+            </StackPanel>
+
+            <!-- Нормативы на конец периода -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Content="Нормативы на конец периода: " VerticalAlignment="Center"/>
+                <TextBox x:Name="NormsAtTheEndOfTextBox" Width="300" Height="30"/>
+            </StackPanel>
+
+            <!-- Процент сдачи -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Content="Процент сдачи: " VerticalAlignment="Center"/>
+                <TextBox x:Name="SurrenderRateTextBox" Width="300" Height="30"/>
+            </StackPanel>
+
+            <!-- Комментарий -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Content="Комментарий: " VerticalAlignment="Center"/>
+                <TextBox x:Name="CommentTextBox" Width="300" Height="30"/>
+            </StackPanel>
+
+            <!-- Кнопка "Добавить" -->
+            <Button x:Name="AddButton" Content="Добавить" Width="150" Height="40" Background="#007ACC" Foreground="White" Margin="0,0,0,10" Click="AddButton_Click"/>
+
+            <!-- Кнопка "Отмена" -->
+            <Button x:Name="CancelButton" Content="Отмена" Width="150" Height="40" Background="#CCCCCC" Foreground="Black" Click="CancelButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Controls:MetroWindow>
